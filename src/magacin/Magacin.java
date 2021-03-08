@@ -5,10 +5,11 @@ import java.util.LinkedList;
 import interfejs.MagacinInterface;
 
 public class Magacin implements MagacinInterface {
+
 	private LinkedList<Artikal> artikli=new LinkedList<Artikal>();
+
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
 		if(artikal!=null && !artikli.contains(artikal)) {
 			artikli.add(artikal);
 		}
@@ -21,7 +22,6 @@ public class Magacin implements MagacinInterface {
 		}
 
 	}
-
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
 		if(artikal!=null) {
@@ -31,9 +31,7 @@ public class Magacin implements MagacinInterface {
 				}
 			}
 		}
-
 	}
-
 	@Override
 	public Artikal pronadjiArtikal(int sifra) {
 		for(Artikal a:artikli) {
